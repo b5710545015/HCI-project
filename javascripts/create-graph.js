@@ -1,12 +1,15 @@
 /*
  * Parse the data and create a graph with the data.
  */
-
-var Years,silverMined;
-var Year1 = [];
-var silverMined1 = ["Silver Minted"];
-var Year2 = [];
-var silverMined2 = ["Silver Minted"];
+//
+// var Years,silverMined;
+// var Years = [];
+// var silverMined1 = ["Silver Minted"];
+// var Year2 = [];
+// var silverMined2 = ["Silver Minted"];
+var Years;
+var silverMined;
+var index = 0;
 var firstTime = true;
 var	minY,maxY;
 
@@ -22,21 +25,25 @@ function parseData(createGraph) {
 
 function manageData(data){
 	if(firstTime){
+		Years = new Array(2);
+		silverMined = new Array(2);
+		Years[0] = [];
+		Years[1] = [];
+		silverMined[0] = ["Silver Minted"];
+		silverMined[1] = ["Silver Minted"];
 		minY = parseInt(data[1][2]);
 		maxY = parseInt(data[1][2]);
 		for (var i = 1; i < data.length; i++) {
 			if(i<data.length/2){
-				Year1.push(data[i][0]);
-				silverMined1.push(data[i][2]);
+				Years[0].push(data[i][0]);
+				silverMined[0].push(data[i][2]);
 			}	else {
-				Year2.push(data[i][0]);
-				silverMined2.push(data[i][2]);
+				Years[1].push(data[i][0]);
+				silverMined[1].push(data[i][2]);
 			}
 			minY = ((parseInt(data[i][2])<minY) ? parseInt(data[i][2]):minY);
 			maxY = ((parseInt(data[i][2])>maxY) ? parseInt(data[i][2]):maxY);
 		}
-		Years = Year1;
-		silverMined = silverMined1;
 	}
 	firstTime = false;
 }
@@ -47,7 +54,7 @@ function createGraph() {
 		bindto: '#chart',
 	    data: {
 	        columns: [
-	        	silverMined
+	        	silverMined[index]
 	        ]
 	    },
 	    axis: {
@@ -57,7 +64,7 @@ function createGraph() {
         },
 	        x: {
 	            type: 'category',
-	            categories: Years,
+	            categories: Years[index],
 	            tick: {
 	            	multiline: false,
                 	culling: {
@@ -76,13 +83,7 @@ function createGraph() {
 }
 
 function clickHandler() {
-	if(Years==Year1){
-		Years = Year2;
-		silverMined = silverMined2;
-	}else{
-		Years = Year1;
-		silverMined = silverMined1;
-	}
+	index = (index+1)%2;
 	createGraph();
 }
 
