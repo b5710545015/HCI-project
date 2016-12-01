@@ -1,8 +1,10 @@
 var provinces;
 var percentage2015;
 var percentage2013;
-var averagePerRegion;
-var averageCountry;
+var averagePerRegion13;
+var averagePerRegion15;
+var averageCountry13;
+var averageCountry15;
 var index = 0;
 var firstTime = true;
 var chart;
@@ -29,11 +31,35 @@ function manageData(data){
 		provinces = new Array(5);
 		percentage2015 = new Array(5);
 		percentage2013 = new Array(5);
+		averagePerRegion13 = new Array(5);
+		averagePerRegion15 = new Array(5);
+		averageCountry13 = new Array(5);
+		averageCountry15 = new Array(5);
 		provinces[0] = ["x"];
 		provinces[1] = ["x"];
 		provinces[2] = ["x"];
 		provinces[3] = ["x"];
 		provinces[4] = ["x"];
+		averagePerRegion13[0] = ["average per region 2013"];
+		averagePerRegion13[1] = ["average per region 2013"];
+		averagePerRegion13[2] = ["average per region 2013"];
+		averagePerRegion13[3] = ["average per region 2013"];
+		averagePerRegion13[4] = ["average per region 2013"];
+		averagePerRegion15[0] = ["average per region 2015"];
+		averagePerRegion15[1] = ["average per region 2015"];
+		averagePerRegion15[2] = ["average per region 2015"];
+		averagePerRegion15[3] = ["average per region 2015"];
+		averagePerRegion15[4] = ["average per region 2015"];
+		averageCountry13[0] = ["average of country 2013"];
+		averageCountry13[1] = ["average of country 2013"];
+		averageCountry13[2] = ["average of country 2013"];
+		averageCountry13[3] = ["average of country 2013"];
+		averageCountry13[4] = ["average of country 2013"];
+		averageCountry15[0] = ["average of country 2015"];
+		averageCountry15[1] = ["average of country 2015"];
+		averageCountry15[2] = ["average of country 2015"];
+		averageCountry15[3] = ["average of country 2015"];
+		averageCountry15[4] = ["average of country 2015"];
 		percentage2015[0] = ["percentage 2015"];
 		percentage2015[1] = ["percentage 2015"];
 		percentage2015[2] = ["percentage 2015"];
@@ -47,15 +73,23 @@ function manageData(data){
 		percentage2013[4] = ["percentage 2013"];
 
 		for (var i = 1; i < data.length-2; i++) {
-			//onsole.log(map[ data[i][0] ] +":"+data[i][1] );
-			provinces[ map[ data[i][0] ] ].push(data[i][1]);
-			percentage2013[ map[ data[i][0] ] ].push(parseFloat(data[i][2]) );
-			percentage2015[ map[ data[i][0] ] ].push(parseFloat(data[i][3]) );
+			if(data[i][1]!="total"){
+				provinces[ map[ data[i][0] ] ].push(data[i][1]);
+				percentage2013[ map[ data[i][0] ] ].push(parseFloat(data[i][2]) );
+				percentage2015[ map[ data[i][0] ] ].push(parseFloat(data[i][3]) );
+				averageCountry13[ map[ data[i][0] ] ].push(parseFloat(data[data.length-2][2]));
+				averageCountry15[ map[ data[i][0] ] ].push(parseFloat(data[data.length-2][3]));
+			}else{
+				for(var j = 0 ; j<provinces[ map[ data[i][0] ] ].length;j++) {
+					averagePerRegion13[ map[ data[i][0] ] ].push(parseFloat(data[i][2]) );
+					averagePerRegion15[ map[ data[i][0] ] ].push(parseFloat(data[i][3]) );
+				}
+			}
 
 		}
 	}
 	firstTime = false;
-	console.log(percentage2015);
+	console.log(averagePerRegion15);
 }
 
 function createGraph() {
@@ -64,15 +98,21 @@ function createGraph() {
 	    data: {
 				x: 'x',
 	        columns: [
-
-	            // ["x",23.38,69.49,41.29,72.03,9.18,61.21,31.15,62.07,51.77,0.29,36.40,86.89,70.81,55.27,29.87,55.70,51.77,52.36],
 							provinces[index],
 	            percentage2013[index],
 							percentage2015[index],
-							// ["percentage 2015",23.38,69.49,41.29,72.03,9.18,61.21,31.15,62.07,51.77,0.29,36.40,86.89,70.81,55.27,29.87,55.70,51.77,52.36],
-							//percentage2013[index],
+							averagePerRegion13[index],
+							averagePerRegion15[index],
+							averageCountry13[index],
+							averageCountry15[index],
 	      ],
-        type: 'bar'
+        type: 'bar',
+				types: {
+            'average per region 2013': 'line',
+            'average per region 2015': 'line',
+						'average of country 2013': 'line',
+						'average of country 2015': 'line',
+        },
 			},
 
 			bar: {
@@ -111,6 +151,10 @@ function update() {
 					provinces[index],
 					percentage2013[index],
 					percentage2015[index],
+					averagePerRegion13[index],
+					averagePerRegion15[index],
+					averageCountry13[index],
+					averageCountry15[index],
 					//percentage2013[index],
         ]
     });

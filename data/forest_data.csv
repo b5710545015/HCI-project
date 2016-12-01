@@ -16,7 +16,7 @@ North, Lamphun,55.27,56.9
 North, Sukhothai,29.87,29.5
 North, Uttaradit,55.7,55.98
 North, Uthai Thani,51.77,51.45
-North,Total,52.36,52.56
+North,total,52.36,52.56
 Northeast, Kalasin,10.54,10.80
 Northeast, Khon Kaen,10.72,10.97
 Northeast, Chaiyaphum,29.77,30.01
@@ -37,7 +37,7 @@ Northeast, Nongbua Lumphoo,10.51,11.00
 Northeast, Umnad Chareun,11.09,10.80
 Northeast, Udon Thani,11.29,11.12
 Northeast, Ubon Ratchathani,18.24,18.66
-Northeast,Total,15.09,14.94
+Northeast,total,15.09,14.94
 Central, Bangkok,0.08,0.33
 Central, Kanchanaburi,62.51,62.39
 Central, Chai Nat,2.41,2.48
@@ -56,7 +56,7 @@ Central, Saraburi,21.78,23.45
 Central, Sing Buri,0,0.05
 Central, Suphan Buri,11.57,11.79
 Central, Ang Thong,0,0
-Central,Total,32.79,33
+Central,total,32.79,33
 east, Chanthaburi,32.75,32.5
 east, Cha Choeng Sao,15.85,15.29
 east, Chon Buri,12.46,12.01
@@ -65,7 +65,7 @@ east, Nakhon Nayok,29.49,29.93
 east, Prachin Buri,28.21,28.26
 east, Rayong,8.58,7.96
 east, Sa Kaew,21.62,21.6
-east,Total,22.45,22.25
+east,total,22.45,22.25
 south, Krabi,16.8,16.59
 south, Chumphon,21.02,21.45
 south, Trang,22.35,22.79
@@ -81,4 +81,4 @@ south, Song Khla,12,11.05
 south, Satun,39.82,39.15
 south, Surat Thani,28.57,28.56
 south,total,23.95,23.99
-total ,Total,31.57,31.6
+total ,total,31.57,31.6
