@@ -1,12 +1,3 @@
-/*
- * Parse the data and create a graph with the data.
- */
-//
-// var Years,silverMined;
-// var Years = [];
-// var silverMined1 = ["Silver Minted"];
-// var Year2 = [];
-// var silverMined2 = ["Silver Minted"];
 var Years;
 var silverMined;
 var index = 0;
