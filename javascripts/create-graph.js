@@ -12,8 +12,8 @@ var map = new Object(); // or var map = {};
 map["North"] = 0;
 map["Northeast"] = 1;
 map["Central"] = 2;
-map["east"] = 3;
-map["south"] = 4;
+map["East"] = 3;
+map["South"] = 4;
 //var fileName = "spanish-silver.csv";
 var fileName = "forest_data.csv";
 function parseData(createGraph) {
