@@ -2,7 +2,8 @@
 To run this project,  you need to run server on your PC in the project folder directory.
 Ex.
 if you have python, you run command "python -m http.server 8000". And the open your browser and go to http://127.0.0.1:8000/
-  You can click on the title of each chart to toggle hide and show of that chart. The cahrts are also zoomable on the x-axis.
+
+  You can click on the title of each chart to toggle the visibility that chart. The charts are also zoomable on the x-axis.
   
   The forest area from 2013 has improved in 2015 by a little. The north has the most percentage of forest area in the country. The province with the largest portion of forest is Mae Hong Son with over 86% of the province is forest area. There are also provinces with no forest area at all. We can also see that the provinces in the Greater Bangkok area has very little forest.
   
