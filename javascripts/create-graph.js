@@ -40,16 +40,16 @@ function manageData(data){
 		provinces[2] = ["x"];
 		provinces[3] = ["x"];
 		provinces[4] = ["x"];
-		averagePerRegion13[0] = ["average per region 2013"];
-		averagePerRegion13[1] = ["average per region 2013"];
-		averagePerRegion13[2] = ["average per region 2013"];
-		averagePerRegion13[3] = ["average per region 2013"];
-		averagePerRegion13[4] = ["average per region 2013"];
-		averagePerRegion15[0] = ["average per region 2015"];
-		averagePerRegion15[1] = ["average per region 2015"];
-		averagePerRegion15[2] = ["average per region 2015"];
-		averagePerRegion15[3] = ["average per region 2015"];
-		averagePerRegion15[4] = ["average per region 2015"];
+		averagePerRegion13[0] = ["average of region 2013"];
+		averagePerRegion13[1] = ["average of region 2013"];
+		averagePerRegion13[2] = ["average of region 2013"];
+		averagePerRegion13[3] = ["average of region 2013"];
+		averagePerRegion13[4] = ["average of region 2013"];
+		averagePerRegion15[0] = ["average of region 2015"];
+		averagePerRegion15[1] = ["average of region 2015"];
+		averagePerRegion15[2] = ["average of region 2015"];
+		averagePerRegion15[3] = ["average of region 2015"];
+		averagePerRegion15[4] = ["average of region 2015"];
 		averageCountry13[0] = ["average of country 2013"];
 		averageCountry13[1] = ["average of country 2013"];
 		averageCountry13[2] = ["average of country 2013"];
@@ -108,16 +108,16 @@ function createGraph() {
 	      ],
         type: 'bar',
 				types: {
-            'average per region 2013': 'line',
-            'average per region 2015': 'line',
+            'average of region 2013': 'line',
+            'average of region 2015': 'line',
 						'average of country 2013': 'line',
 						'average of country 2015': 'line',
         },
 		colors: {
 			"average of country 2013": '#ff6347',
 			"average of country 2015": '#ffd700',
-			"average per region 2013": '#c71585',
-			"average per region 2015" : '#bc15c7',
+			"average of region 2013": '#c71585',
+			"average of region 2015" : '#bc15c7',
 			"percentage 2013": '#00ff7f',
 			"percentage 2015": '#006400'
 		},
@@ -146,8 +146,8 @@ function createGraph() {
         }
     	},
 	    zoom: {
-        	enabled: true,
 			rescale: true,
+        	enabled: true,
     	},
 
 	    legend: {
