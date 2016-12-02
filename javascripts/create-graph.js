@@ -113,12 +113,21 @@ function createGraph() {
 						'average of country 2013': 'line',
 						'average of country 2015': 'line',
         },
+		colors: {
+			"average of country 2013": '#ff6347',
+			"average of country 2015": '#ffd700',
+			"average per region 2013": '#c71585',
+			"average per region 2015" : '#bc15c7',
+			"percentage 2013": '#00ff7f',
+			"percentage 2015": '#006400'
+		},
 			},
 
 			bar: {
         width: {
             ratio: 0.8 // this makes bar width 50% of length between ticks
-        }
+        },
+		
         // or
         //width: 100 // this makes bar width 100px
     	},
@@ -137,11 +146,14 @@ function createGraph() {
         }
     	},
 	    zoom: {
-        	enabled: true
+        	enabled: true,
+			rescale: true,
     	},
+		
 	    legend: {
 	        position: 'right'
-	    }
+	    },
+		
 	});
 }
 
