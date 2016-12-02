@@ -1,15 +1,15 @@
 Region,Province,Percent56,Percent58
 North, Kamphaeng Phet,23.38,23.19
-North, Chiang Rai,69.49,41.23
-North, Chiang Mai,41.29,69.96
+North, Chiang Rai,41.29,41.23
+North, Chiang Mai,69.49,69.96
 North, Tak,72.03,72
 North, Nakhon Sawan,9.18,9.31
 North, Nan,61.21,61.4
-North, Phayao,31.15,51.93
-North, Phichit,62.07,0.33
-North, Phitsanulok,51.77,36.52
-North, Phetchabun,0.29,31.25
-North, Phrae,36.4,64.17
+North, Phayao,51.77,51.93
+North, Phichit,0.29,0.33
+North, Phitsanulok,36.40,36.52
+North, Phetchabun,31.15,31.25
+North, Phrae,62.07,64.17
 North, Mae Hong Son,86.89,86.99
 North, Lampang,70.81,70.64
 North, Lamphun,55.27,56.9
@@ -45,8 +45,8 @@ Central, Nakhon Pathom,0,0.01
 Central, Nonthaburi,0,0
 Central, Pathum Thani,0,0
 Central, Prachuap Khiri Khan,35.64,37.17
-Central, Phra Nakhon Si Ayutthaya,57.38,0
-Central, Phetchaburi,0,57.13
+Central, Phra Nakhon Si Ayutthaya,0,0
+Central, Phetchaburi,57.38,57.13
 Central, Ratchaburi,34.27,33.1
 Central, Lop Buri,13.86,14.33
 Central, Samut Prakan,1.43,2.43
