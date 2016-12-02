@@ -26,18 +26,21 @@
   	</head>
   	<body>
   		<br><br><br>
-    	<div class="container">
-    		<div id="chart"></div>
-    	</div>
-      <!--<button type="button" onclick="clickHandler()">Click Me!</button>-->
-	  <select id="regionSelect" onchange="changeHandler()">
+    	<div class="container"><div class="row"><div class="col-md-4 col-md-offset-4">
+	  <select class="form-control" id="regionSelect" onchange="changeHandler()">
 		  <option value=0>North</option>
 		  <option value=1>Northeast</option>
 		  <option value=2>Central</option>
 		  <option value=3>East</option>
 		  <option value=4>South</option>
 	  </select>
-
+	  </div></div>
+	  <div class="row">
+		<div class="col-md-12">
+    		<div id="chart"></div>
+		</div>
+		</div>
+	  </div>
 
   	</body>
 </html>
